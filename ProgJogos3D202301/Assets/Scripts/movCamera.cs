@@ -5,19 +5,34 @@ using UnityEngine;
 public class movCamera : MonoBehaviour
 {
     public GameObject bolinha;
+    
     public Vector3 posicaoInicial;
     public Vector3 posicaoAtual;
+
+    //solução Nicolas
+    //public Vector3 diferenca;
+
     // Start is called before the first frame update
     void Start()
     {
-        posicaoInicial = bolinha.transform.position;
+        #region Solução Nicolas
+        //posicaoInicial = bolinha.transform.position;
+        //diferenca = bolinha.transform.position - transform.position;
+        #endregion
+
+        posicaoInicial = transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        posicaoAtual = bolinha.transform.position;
-        transform.position = transform.position +
-            (posicaoAtual - posicaoInicial);
-;    }
+        #region Solução Nicolas
+        //posicaoAtual = bolinha.transform.position;
+        //transform.position = bolinha.transform.position - diferenca;
+        #endregion
+
+        transform.position = posicaoInicial + bolinha.transform.position;
+
+
+    }
 }
