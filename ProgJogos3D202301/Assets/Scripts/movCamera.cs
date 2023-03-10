@@ -9,13 +9,13 @@ public class movCamera : MonoBehaviour
     public Vector3 posicaoInicial;
     public Vector3 posicaoAtual;
 
-    //solução Nicolas
+    //soluï¿½ï¿½o Nicolas
     //public Vector3 diferenca;
 
     // Start is called before the first frame update
     void Start()
     {
-        #region Solução Nicolas
+        #region Soluï¿½ï¿½o Nicolas
         //posicaoInicial = bolinha.transform.position;
         //diferenca = bolinha.transform.position - transform.position;
         #endregion
@@ -26,7 +26,7 @@ public class movCamera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        #region Solução Nicolas
+        #region Soluï¿½ï¿½o Nicolas
         //posicaoAtual = bolinha.transform.position;
         //transform.position = bolinha.transform.position - diferenca;
         #endregion
