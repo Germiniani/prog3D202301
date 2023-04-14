@@ -50,7 +50,7 @@ public class aviaoController : MonoBehaviour
 
             if (aceleracao < 0)
             {
-                aceleracao++;
+                aceleracao = aceleracao + 0.01f;
             }
         }
         #endregion  
