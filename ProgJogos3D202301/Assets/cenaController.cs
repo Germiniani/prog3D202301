@@ -9,6 +9,10 @@ public class cenaController : MonoBehaviour
     [SerializeField] private Color corAgua;
     [SerializeField] private Color corForaAgua;
 
+    public Camera minimap;
+    public KeyCode ativarMap;
+    private bool habilitado = false;
+
 
 
     void Start()
@@ -19,6 +23,8 @@ public class cenaController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        ativarMapa();
+
         if (jogador.position.y < mar.position.y)
         {
             //debaixo da agua
@@ -35,6 +41,17 @@ public class cenaController : MonoBehaviour
             RenderSettings.fogColor = corForaAgua;
             RenderSettings.fogStartDistance = 100;
             RenderSettings.fogEndDistance = 300;
+        }
+    }
+    public void ativarMapa()
+    {
+        if (Input.GetKey(ativarMap))
+        {
+            minimap.depth = 10;
+        }
+        else
+        {
+            minimap.depth = 0;
         }
     }
 }
