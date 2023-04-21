@@ -15,8 +15,8 @@ RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
   m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
-  m_FogMode: 3
+  m_FogColor: {r: 0.18141685, g: 0.30309206, b: 0.5283019, a: 1}
+  m_FogMode: 2
   m_FogDensity: 0.03
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!4 &143714729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 9485b0c79d11e2e4d0007da98d76c639, type: 3}
+  m_PrefabInstance: {fileID: 1014870617}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &180262781
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +487,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 362705154}
   m_CullTransparentMesh: 1
+--- !u!4 &450069877 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5543466090346260970, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
+  m_PrefabInstance: {fileID: 7102810675496922385}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &490139068 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4967744554933926495, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
@@ -675,7 +685,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!20 &1244497578
 Camera:
   m_ObjectHideFlags: 0
@@ -753,6 +763,7 @@ GameObject:
   - component: {fileID: 1249889622}
   - component: {fileID: 1249889621}
   - component: {fileID: 1249889620}
+  - component: {fileID: 1249889623}
   m_Layer: 0
   m_Name: Terrain
   m_TagString: Untagged
@@ -833,6 +844,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1249889623
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249889619}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ca5d5f40f13852f40ba3dd2c77ccce08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jogador: {fileID: 450069877}
+  mar: {fileID: 143714729}
+  corAgua: {r: 0.17180489, g: 0.21261449, b: 0.7169812, a: 0}
 --- !u!1001 &1378341137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1271,6 +1297,8 @@ MonoBehaviour:
   cam1Pessoa: {fileID: 180262784}
   cam3Pessoa: {fileID: 262426508}
   camRetrovisor: {fileID: 1696177493}
+  habilitarRetrovisor: 116
+  trocaCamera: 121
 --- !u!1001 &7102810675496922385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1297,15 +1325,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4118882490935739533, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 509
+      value: 601.893
       objectReference: {fileID: 0}
     - target: {fileID: 4118882490935739533, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 62.96
+      value: 63.35
       objectReference: {fileID: 0}
     - target: {fileID: 4118882490935739533, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 763.5
+      value: 778.407
       objectReference: {fileID: 0}
     - target: {fileID: 4118882490935739533, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1339,6 +1367,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: jogador
       objectReference: {fileID: 0}
+    - target: {fileID: 4706796600326761869, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5925079321184358981, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1367,6 +1399,14 @@ PrefabInstance:
       propertyPath: m_projectionMatrixMode
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8758080623344845470, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
+      propertyPath: mirar
+      value: 324
+      objectReference: {fileID: 0}
+    - target: {fileID: 8758080623344845470, guid: 319f6d35a5b24424abe33fe004c7287d, type: 3}
+      propertyPath: camMirar
+      value: 
+      objectReference: {fileID: 1592303030}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:

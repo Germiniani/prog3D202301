@@ -5,6 +5,10 @@ using UnityEngine;
 public class armaController : MonoBehaviour
 {
     public KeyCode teclaLaser;
+    public KeyCode mirar;
+    
+
+    public Camera camMirar;
     private bool habilitado = false;
     public GameObject laser;
     // Start is called before the first frame update
@@ -28,6 +32,19 @@ public class armaController : MonoBehaviour
                 laser.SetActive(false);
             }
             
+        }
+        if (Input.GetKey(mirar))
+        {
+            habilitado = !habilitado;
+            if (habilitado)
+            {
+                camMirar.depth = 10;
+            }
+            else
+            {
+                camMirar.depth = 0;
+            }
+
         }
     }
 }
