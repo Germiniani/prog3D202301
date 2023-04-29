@@ -15,9 +15,9 @@ public class aviaoController : MonoBehaviour
     public KeyCode paraEsquerda;
     public KeyCode acelerar;
     public KeyCode freiar;
-    private float aceleracao = 0;
-    private float movX = 0;
-    private float movY = 0;
+    private float aceleracao = 0.01f;
+    private float movX = 0.01f;
+    private float movY = 0.01f;
     public bool ligado = false;
 
     // Start is called before the first frame update
@@ -43,7 +43,7 @@ public class aviaoController : MonoBehaviour
         if (Input.GetKey(acelerar))
         {
             //aceleracao++;
-            aceleracao = aceleracao - 1 * Time.deltaTime;
+            aceleracao = aceleracao - 0.01f * Time.deltaTime;
         }
         if (Input.GetKey(freiar))
         {
@@ -54,23 +54,23 @@ public class aviaoController : MonoBehaviour
             }
         }
         #endregion  
-        movX = 0; movY = 0;
+        movX = 0.01f; movY = 0.01f;
         #region Movimento do avião
         if (Input.GetKey(paraCima))
         {
-            movX = 1;
+            movX = 0.01f;
         }
         if (Input.GetKey(paraBaixo))
         {
-            movX = -1;
+            movX = -0.01f;
         }
         if (Input.GetKey(paraDireita))
         {
-            movY = 1;
+            movY = 0.01f;
         }
         if (Input.GetKey(paraEsquerda))
         {
-            movY = -1;
+            movY = -0.01f;
         }
         #endregion
         transform.Translate(Vector3.up * aceleracao);
